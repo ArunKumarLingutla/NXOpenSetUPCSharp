@@ -23,7 +23,7 @@ namespace NXOpenSetUPCSharp
             }
             else
             {
-                DirectoriesUtility.DeleteFilesInDirectory(ToolVariables.OutputDirectory);
+                FileManager.DeleteFilesInDirectory(ToolVariables.OutputDirectory);
             }
             NXLogger.Init(System.IO.Path.Combine(ToolVariables.OutputDirectory, "NXLog"), true, true);
             NXLogger.Instance.Log("Tool initialized with input directory: " + ToolVariables.InputDirectory, LogLevel.Info);

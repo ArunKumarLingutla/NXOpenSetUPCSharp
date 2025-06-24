@@ -126,6 +126,13 @@ C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\Build\Debug\NUnit
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\Build\Debug\NXOpenSetupCSharpTest.dll.config
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\Build\Debug\NXOpenSetupCSharpTest.dll
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\Build\Debug\NXOpenSetupCSharpTest.pdb
+C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetUPCSharpTest.csproj.AssemblyReference.cache
+C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetUPCSharpTest.csproj.SuggestedBindingRedirects.cache
+C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetupCSharpTest.dll.config
+C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetUPCSharpTest.csproj.CoreCompileInputs.cache
+C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSe.9F1A7431.Up2Date
+C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetupCSharpTest.dll
+C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetupCSharpTest.pdb
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Build\Debug\NUnit3.TestAdapter.pdb
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Build\Debug\nunit.engine.dll
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Build\Debug\nunit.engine.api.dll
@@ -135,13 +142,6 @@ C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Build\Debug\NUnit3.Test
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Build\Debug\NXOpenSetupCSharpTest.dll.config
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Build\Debug\NXOpenSetupCSharpTest.dll
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Build\Debug\NXOpenSetupCSharpTest.pdb
-C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetUPCSharpTest.csproj.AssemblyReference.cache
-C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetUPCSharpTest.csproj.SuggestedBindingRedirects.cache
-C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetupCSharpTest.dll.config
-C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetUPCSharpTest.csproj.CoreCompileInputs.cache
-C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSe.9F1A7431.Up2Date
-C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetupCSharpTest.dll
-C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\NXOpenSetupCSharpTest\obj\Debug\NXOpenSetupCSharpTest.pdb
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\obj\Debug\NXOpenSetUPCSharpTest.csproj.AssemblyReference.cache
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\obj\Debug\NXOpenSetUPCSharpTest.csproj.SuggestedBindingRedirects.cache
 C:\Users\arunk\source\repos\NXOpenSetUPCSharp\SourceCode\Tests\obj\Debug\NXOpenSetupCSharpTest.dll.config

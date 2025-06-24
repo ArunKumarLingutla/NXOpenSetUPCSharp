@@ -38,7 +38,7 @@ namespace NXOpenSetUPCSharp
 
             // Generate log file path with timestamp
             string tempDir = Environment.GetEnvironmentVariable("TEMP") ?? @"C:\Temp";
-            string timestampedFile = $"{logFileBaseName}_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
+            string timestampedFile = $"{logFileBaseName}_{DateTime.Now:ddMMyyy_HHmmss}.txt";
             _filePath = Path.Combine(tempDir, timestampedFile);
 
             // Initialize StreamWriter for file logging
