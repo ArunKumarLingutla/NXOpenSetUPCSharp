@@ -190,4 +190,7 @@ namespace NXOpenSetUPCSharp
         }
 
     }
+
 }
+////Get the path to the user's desktop directory 
+//string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);

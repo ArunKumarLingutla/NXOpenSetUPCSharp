@@ -61,6 +61,7 @@
     <Compile Include="Names.cs" />
     <Compile Include="NXLogger.cs" />
     <Compile Include="NXOpenSetUPCsharp.cs" />
+    <Compile Include="NXUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToolSetup.cs" />
     <Compile Include="ToolVariables.cs" />
