@@ -63,8 +63,8 @@
     <Compile Include="NXOpenSetUPCsharp.cs" />
     <Compile Include="NXUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToolSetup.cs" />
-    <Compile Include="ToolVariables.cs" />
+    <Compile Include="ProjectSetUp.cs" />
+    <Compile Include="ProjectVariables.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Res\" />

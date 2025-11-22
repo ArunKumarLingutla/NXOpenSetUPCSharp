@@ -24,7 +24,9 @@ namespace NXOpenSetUPCSharp
                 theUI = NXOpen.UI.GetUI();
                 NXOpen.Part workPart = theSession.Parts.Work;
                 NXOpen.Part displayPart = theSession.Parts.Display;
-                ToolSetup.InitializeTool();
+                ProjectSetUp.InitializeTool();
+
+                //Write your code here
             }
             catch (Exception)
             {
@@ -57,3 +59,9 @@ namespace NXOpenSetUPCSharp
         }
     }
 }
+
+/*
+ 1. creating a point (utilities)
+ 2. 
+ 
+ */
