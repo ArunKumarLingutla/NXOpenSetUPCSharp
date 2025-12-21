@@ -1,5 +1,7 @@
 ﻿using NXOpen;
+using NXOpen.CAE;
 using NXOpen.Features;
+using NXOpen.UF;
 using NXOpen.Utilities;
 using System;
 using System.Collections.Generic;
@@ -11,6 +13,102 @@ namespace NXOpenSetUPCSharp
 {
     public class NXUtilities
     {
+        /// <summary>
+        /// Create a new sketch and activate sketch environment to create sketch. after activating we can create what ever sketch we want
+        /// </summary>
+        /// <param name="normal">input normal direction for plane on which we want to create sketch</param>
+        /// <param name="origin">origin point at which plane should be created</param>
+        /// <returns>returns a sketch feature</returns>
+        public static Feature ActivateSketch(double[] normal, double[] origin)
+        {
+            NXOpen.Session theSession = NXOpen.Session.GetSession();
+            NXOpen.Part workPart = theSession.Parts.Work;
+            NXOpen.Part displayPart = theSession.Parts.Display;
+            // ----------------------------------------------
+            //   Menu: Insert->Sketch...
+            // ----------------------------------------------
+
+            NXOpen.Sketch nullNXOpen_Sketch = null;
+            NXOpen.SketchInPlaceBuilder sketchInPlaceBuilder1;
+            sketchInPlaceBuilder1 = workPart.Sketches.CreateSketchInPlaceBuilder2(nullNXOpen_Sketch);
+
+            NXOpen.Point3d origin1 = new NXOpen.Point3d(origin[0], origin[1], origin[2]);
+            NXOpen.Vector3d normal1 = new NXOpen.Vector3d(normal[0], normal[1], normal[2]);
+            NXOpen.Plane plane1;
+            plane1 = workPart.Planes.CreatePlane(origin1, normal1, NXOpen.SmartObject.UpdateOption.WithinModeling);
+
+            sketchInPlaceBuilder1.PlaneReference = plane1;
+
+            //NXOpen.Unit unit1 = (NXOpen.Unit)workPart.UnitCollection.FindObject("MilliMeter");
+            //NXOpen.Expression expression1;
+            //expression1 = workPart.Expressions.CreateSystemExpressionWithUnits("0", unit1);
+
+            //NXOpen.Expression expression2;
+            //expression2 = workPart.Expressions.CreateSystemExpressionWithUnits("0", unit1);
+
+            //NXOpen.SketchAlongPathBuilder sketchAlongPathBuilder1;
+            //sketchAlongPathBuilder1 = workPart.Sketches.CreateSketchAlongPathBuilder(nullNXOpen_Sketch);
+
+            //sketchAlongPathBuilder1.PlaneLocation.Expression.RightHandSide = "0";
+
+            //theSession.Preferences.Sketch.CreateInferredConstraints = true;
+
+            //theSession.Preferences.Sketch.ContinuousAutoDimensioning = true;
+
+            //theSession.Preferences.Sketch.DimensionLabel = NXOpen.Preferences.SketchPreferences.DimensionLabelType.Expression;
+
+            //theSession.Preferences.Sketch.TextSizeFixed = true;
+
+            //theSession.Preferences.Sketch.FixedTextSize = 3.0;
+
+            //theSession.Preferences.Sketch.DisplayParenthesesOnReferenceDimensions = true;
+
+            //theSession.Preferences.Sketch.DisplayReferenceGeometry = false;
+
+            //theSession.Preferences.Sketch.ConstraintSymbolSize = 3.0;
+
+            //theSession.Preferences.Sketch.DisplayObjectColor = false;
+
+            //theSession.Preferences.Sketch.DisplayObjectName = true;
+
+            NXOpen.NXObject nXObject1;
+            nXObject1 = sketchInPlaceBuilder1.Commit();
+
+            NXOpen.Sketch sketch1 = (NXOpen.Sketch)nXObject1;
+            NXOpen.Features.Feature feature1;
+            feature1 = sketch1.Feature;
+
+            //NXOpen.Session.UndoMarkId markId4;
+            //markId4 = theSession.SetUndoMark(NXOpen.Session.MarkVisibility.Invisible, "update");
+
+            //int nErrs1;
+            //nErrs1 = theSession.UpdateManager.DoUpdate(markId4);
+
+            sketch1.Activate(NXOpen.Sketch.ViewReorient.True);
+
+            sketchInPlaceBuilder1.Destroy();
+
+            //sketchAlongPathBuilder1.Destroy();
+
+            plane1.DestroyPlane();
+
+            return feature1;
+        }
+
+        /// <summary>
+        /// After activating sketch environment and creating sketch, it should be deactivated
+        /// </summary>
+        public static void DeActiveSketch()
+        {
+            NXOpen.Session theSession = NXOpen.Session.GetSession();
+            NXOpen.Part workPart = theSession.Parts.Work;
+            NXOpen.Part displayPart = theSession.Parts.Display;
+            NXOpen.Sketch sketch2;
+            sketch2 = theSession.ActiveSketch;
+
+            theSession.ActiveSketch.Deactivate(NXOpen.Sketch.ViewReorient.True, NXOpen.Sketch.UpdateLevel.Model);
+        }
+
         /// <summary>
         /// Converts an NXOpen.Tag to its corresponding TaggedObject instance, later convert or cast to specific types if needed like -- Point nxPoint = (Point)obj;.
         /// </summary>
@@ -121,7 +219,35 @@ namespace NXOpenSetUPCSharp
 
             return line;
         }
+        public static double MeasureDistance(TaggedObject obj1,TaggedObject obj2)
+        {
+            UFSession ufs=UFSession.GetUFSession();
+            double[] guess1 = new double[3] { 0.0, 0.0, 0.0 };
+            double[] guess2 = new double[3] { 0.0, 0.0, 0.0 };
 
+            int guess1_given = 0;
+            int guess2_given = 0;
+
+            // Output arrays
+            double[] pt_on_obj1 = new double[3];
+            double[] pt_on_obj2 = new double[3];
+            double min_dist;
+
+
+            // Call UF function
+            ufs.Modl.AskMinimumDist(
+                obj1.Tag,
+                obj2.Tag,
+                guess1_given,
+                guess1,
+                guess2_given,
+                guess2,
+                out min_dist,
+                pt_on_obj1,
+                pt_on_obj2
+            );
+            return min_dist;
+        }
         /// <summary>
         /// deletes the specified TaggedObject(s) from the current work part.
         /// </summary>

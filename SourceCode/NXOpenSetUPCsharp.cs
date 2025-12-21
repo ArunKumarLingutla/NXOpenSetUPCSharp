@@ -27,6 +27,7 @@ namespace NXOpenSetUPCSharp
                 ProjectSetUp.InitializeTool();
 
                 //Write your code here
+                
             }
             catch (Exception)
             {
