@@ -1,10 +1,5 @@
 ﻿using NXOpen;
-using NXOpen.UF;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NXOpenSetUPCSharp
 {
@@ -27,13 +22,16 @@ namespace NXOpenSetUPCSharp
                 ProjectSetUp.InitializeTool();
 
                 //Write your code here
-                
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                NXLogger.Instance.LogException(ex);
                 NXLogger.Instance.Dispose();
+                throw;
             }
         }
+
 
         public static int GetUnloadOption(string arg)
         {
