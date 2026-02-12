@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NXOpen;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -18,7 +19,17 @@ namespace NXOpenSetUPCSharp
                 throw new DirectoryNotFoundException($"Directory does not exist: {directory}");
             }
         }
+        
+        public static string ExtractFileNameFromPath(string filePath)
+        {
+            //string compNmae = filePath.Substring(filePath.LastIndexOf("\\") + 1);
+            //compNmae = compNmae.Substring(0, compNmae.LastIndexOf("."));
+            if (string.IsNullOrEmpty(filePath))
+                throw new ArgumentException("File path cannot be null or empty.", nameof(filePath));
+            return Path.GetFileName(filePath);
 
+
+        }
         /// <summary>
         /// Ensures that the specified directory exists, creating it if it does not.
         /// </summary>
