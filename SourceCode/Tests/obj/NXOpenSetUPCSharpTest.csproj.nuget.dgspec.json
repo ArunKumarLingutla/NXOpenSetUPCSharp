@@ -12,12 +12,15 @@
         "UsingMicrosoftNETSdk": false,
         "frameworks": {
           "net48": {
+            "framework": "net48",
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "net48": {}
+        "net48": {
+          "framework": "net48"
+        }
       }
     },
     "C:\\Users\\arunk\\source\\repos\\NXOpenSetUPCSharp\\SourceCode\\Tests\\NXOpenSetUPCSharpTest.csproj": {
@@ -48,6 +51,7 @@
         },
         "frameworks": {
           "net48": {
+            "framework": "net48",
             "projectReferences": {
               "C:\\Users\\arunk\\source\\repos\\NXOpenSetUPCSharp\\SourceCode\\NXOpenSetUPCSharp.csproj": {
                 "projectPath": "C:\\Users\\arunk\\source\\repos\\NXOpenSetUPCSharp\\SourceCode\\NXOpenSetUPCSharp.csproj"
@@ -63,6 +67,7 @@
       },
       "frameworks": {
         "net48": {
+          "framework": "net48",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
